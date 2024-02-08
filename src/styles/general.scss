@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jumbo{
+    height: 4rem;
+    background-color: #ff6900;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    li{
+        margin: 5px;
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.logo img{
+    width: 130px;
+}

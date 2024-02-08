@@ -3,22 +3,22 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header></header>
+  <header>
+    <div class="jumbo">
+      <ul>
+        <li><a href="#">Donna</a></li>
+        <li><a href="#">Uomo</a></li>
+        <li><a href="#">Bambino</a></li>
+      </ul>
+      <div class="logo">
+        <img src="../public/boolean-logo.png" alt="logo">
+      </div>
+    </div>
+  </header>
   <main></main>
   <footer></footer>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style lang="scss">
+  @use './styles/general.scss'
 </style>
