@@ -20,6 +20,7 @@ import HelloWorld from './components/HelloWorld.vue'
       </div>
     </div>
   </header>
+
   <main>
     <section>
       <div class="card">
@@ -54,7 +55,29 @@ import HelloWorld from './components/HelloWorld.vue'
       </div>
     </section>
   </main>
-  <footer></footer>
+
+  <footer>
+      <div class="jumbo-footer">
+        <div class="left">
+          <h3>Boolando srl</h3>
+          <ul>
+            <li><a href="#">Informazioni legali</a></li>
+            <li><a href="#">Informativa sulla privacy</a></li>
+            <li><a href="#">Diritto di recesso</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <p>Trovaci anche su</p>
+          <div class="icon">
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-pinterest"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+          </div>
+        </div>
+      </div>
+  </footer>
 </template>
 
 <style lang="scss">
