@@ -13,9 +13,23 @@ import HelloWorld from './components/HelloWorld.vue'
       <div class="logo">
         <img src="../public/boolean-logo.png" alt="logo">
       </div>
+      <div class="icon">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
     </div>
   </header>
-  <main></main>
+  <main>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </main>
   <footer></footer>
 </template>
 
