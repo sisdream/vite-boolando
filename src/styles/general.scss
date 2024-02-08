@@ -35,3 +35,26 @@ ul{
         margin: 0 5px;
     }
 }
+
+section{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    .card-img{
+        width: 350px;
+        height: 450px;
+        margin: 40px 0;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+}
