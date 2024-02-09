@@ -2,7 +2,11 @@
     export default {
         data () {
             return {
-
+                links: [
+                    'Informazioni legali',
+                    'Informativa sulla privacy',
+                    'Diritto di recesso',
+                ],
             }
         },
     }
@@ -14,9 +18,9 @@
             <div class="left">
                 <h3>Boolando srl</h3>
                 <ul>
-                  <li><a href="#">Informazioni legali</a></li>
-                  <li><a href="#">Informativa sulla privacy</a></li>
-                  <li><a href="#">Diritto di recesso</a></li>
+                    <li v-for="link in links">
+                        <a href="#">{{ link  }}</a>
+                    </li>
                 </ul>
               </div>
               <div class="right">

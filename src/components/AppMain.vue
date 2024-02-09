@@ -26,14 +26,15 @@
     @use '../styles/partials/mixins' as *;
 
     .container {
-        margin-top: calc($grid-spacing * 4);
-        margin-bottom: calc($grid-spacing * 4);
-        border: 1px solid red;
-        height: 500px;
+       
+        margin: calc($grid-spacing * 4);;
+        height: 100%;
 
         .row {
             height: 100%;
             flex-wrap: wrap;
+            display: flex;
+            gap: 8rem;
         }
     }
 </style>
