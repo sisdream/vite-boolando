@@ -1,23 +1,18 @@
 <script>
+    import AppCard from './AppCard.vue';
     export default {
         data () {
             return {
-
+                
             }
         },
+        components: { AppCard },
     }
 </script>
 
 <template>
     <div class="container">
-        <div class="row">
-            <div class="card debug"></div>
-            <div class="card debug"></div>
-            <div class="card debug"></div>
-            <div class="card debug"></div>
-            <div class="card debug"></div>
-            <div class="card debug"></div>
-        </div>
+        <AppCard />
     </div>
 </template>
 
@@ -26,8 +21,7 @@
     @use '../styles/partials/mixins' as *;
 
     .container {
-       
-        margin: calc($grid-spacing * 4);;
+        margin: calc($grid-spacing * 4) 100px;
         height: 100%;
 
         .row {
