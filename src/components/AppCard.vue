@@ -12,7 +12,7 @@ export default {
         <div class="img-container">
             <img :src="img" :alt="title" />
         </div>
-        <h3 class="title">{{ title ?? 'sto cazzo' }}</h3>
+        <h3 class="title">{{ title }}</h3>
     </div>
 </template>
 

@@ -105,6 +105,7 @@
     <div class="container">
         <AppCard v-for="product in products"
             :img="product.src"
+            :title="product.brand"
         />
     </div>
 </template>
