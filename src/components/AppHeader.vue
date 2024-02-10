@@ -7,6 +7,11 @@
                     'Uomo',
                     'Bambino'
                 ],
+                icons: [
+                    "fa-solid fa-user",
+                    "fa-solid fa-heart",
+                    "fa-solid fa-bag-shopping"
+                ]
             }
         },
     }
@@ -26,9 +31,7 @@
             </div>
 
             <div class="icon">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i v-for="icon in icons" :class="icon"></i>
             </div>
        </div>
    </section>

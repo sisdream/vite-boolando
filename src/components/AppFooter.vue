@@ -7,6 +7,13 @@
                     'Informativa sulla privacy',
                     'Diritto di recesso',
                 ],
+                icons: [
+                    "fa-brands fa-square-twitter",
+                    "fa-brands fa-square-facebook",
+                    "fa-brands fa-square-instagram",
+                    "fa-brands fa-square-pinterest",
+                    "fa-brands fa-square-youtube",
+                ]
             }
         },
     }
@@ -26,11 +33,7 @@
               <div class="right">
                 <p>Trovaci anche su</p>
                 <div class="icon">
-                  <i class="fa-brands fa-square-twitter"></i>
-                  <i class="fa-brands fa-square-facebook"></i>
-                  <i class="fa-brands fa-square-instagram"></i>
-                  <i class="fa-brands fa-square-pinterest"></i>
-                  <i class="fa-brands fa-square-youtube"></i>
+                    <i v-for="icon in icons" :class="icon"></i>
                 </div>
               </div>
         </div>

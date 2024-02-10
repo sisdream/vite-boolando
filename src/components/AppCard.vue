@@ -18,15 +18,17 @@ export default {
         <div class="img-container">
             <img :src="img" :alt="brand" />
             <img class="hover-img" :src="hover" :alt="brand">
+
+            <div class="badges">
+                <span v-for="badge in badges" :class="badge.type === 'tag' ? 'sustainability' : 'discount'"    class="badge">
+                    {{ badge.value }}
+                </span>
+            </div>
         </div>
 
         <div class="heart">
             <i v-if="isInFavorites" class="fa-solid fa-heart"></i>
             <i v-else class="fa-regular fa-heart"></i>
-        </div>
-
-        <div class="badges">
-
         </div>
 
         <div class="text">
@@ -55,6 +57,7 @@ export default {
 
 .img-container {
     width: 100%;
+    position: relative;
     img {
         display: block;
         width: 100%;
@@ -77,6 +80,29 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
+.badges{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+}
+
+.badge{
+    padding: .25rem .5rem;
+    color: #fff;
+    font-size: .7rem;
+    &.sustainability {
+        background-color: #008000;
+    }
+
+    &.discount{
+        background-color: #ff0000;
+    }
+}
+
 
 .title{
     color: #888888;
