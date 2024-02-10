@@ -29,7 +29,7 @@
                 <i class="fa-solid fa-user"></i>
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-solid fa-bag-shopping"></i>
-              </div>
+            </div>
        </div>
    </section>
 </template>

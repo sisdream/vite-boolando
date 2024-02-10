@@ -1,24 +1,34 @@
-<script> 
-    export default{
-        props: {
-            img: String,
-            title: String,
-        }
-    }
+<script>
+export default {
+    props: {
+        img: String,
+        title: String,
+    },
+};
 </script>
 
 <template>
-    <div class="card debug">
-        <img :src="img"  :alt="title">
-        <h3 class="title">{{ title }}</h3>
+    <div class="card">
+        <div class="img-container">
+            <img :src="img" :alt="title" />
+        </div>
+        <h3 class="title">{{ title ?? 'sto cazzo' }}</h3>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.debug {
-    border: 6px solid aqua;
-    height: 400px;
-    width: 300px;
+.card {
+    border: 3px solid black;
+    width: calc(100% / 3 - 2rem);
+}
+.img-container {
+    width: 100%;
+    // debug
+    background-color: red;
 }
 
+.img-container img {
+    display: block;
+    width: 100%;
+}
 </style>

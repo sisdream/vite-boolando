@@ -10,7 +10,6 @@
 
 
 <template>
-
   <app-header />
 
   <app-main />

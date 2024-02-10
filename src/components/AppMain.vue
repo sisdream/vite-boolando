@@ -5,8 +5,8 @@
             return {
                 products: [
                     {
-                        src: '1.webp',
-                        hover: '1b.webp',
+                        src: './1.webp',
+                        hover: './1b.webp',
                         brand: 'Levis',
                         name: 'Relaxed Fit',
                         price: 29.99,
@@ -24,8 +24,8 @@
                         ],
                     },
                     {
-                        src: '2.webp',
-                        hover: '2b.webp',
+                        src: './2.webp',
+                        hover: './2b.webp',
                         brand: 'Guess',
                         name: 'Roses tee',
                         price: 29.99,
@@ -39,8 +39,8 @@
                         ],
                     },
                     {
-                        src: '3.webp',
-                        hover: '3b.webp',
+                        src: './3.webp',
+                        hover: './3b.webp',
                         brand: 'Come Zucchero Filato',
                         name: 'Voglia di colri pastello',
                         price: 164.99,
@@ -54,8 +54,8 @@
                         ],
                     },
                     {
-                        src: '4.webp',
-                        hover: '4b.webp',
+                        src: './4.webp',
+                        hover: './4b.webp',
                         brand: 'Levis',
                         name: 'Tee Unisex',
                         price: 29.99,
@@ -73,16 +73,16 @@
                         ],
                     },
                     {
-                        src: '5.webp',
-                        hover: '5b.webp',
+                        src: './5.webp',
+                        hover: './5b.webp',
                         brand: 'Maya Deluxe',
                         name: 'Stripe Bodice',
                         price: 99.99,
                         isInFavorites: true,  
                     },
                     {
-                        src: '6.webp',
-                        hover: '6b.webp',
+                        src: './6.webp',
+                        hover: './6b.webp',
                         brand: 'Esprit',
                         name: 'Maglione-Black',
                         price: 29.99,
@@ -103,8 +103,8 @@
 
 <template>
     <div class="container">
-        <AppCard 
-           
+        <AppCard v-for="product in products"
+            :img="product.src"
         />
     </div>
 </template>
@@ -114,14 +114,11 @@
     @use '../styles/partials/mixins' as *;
 
     .container {
-        margin: calc($grid-spacing * 4) 100px;
+        width: min(90%, 1000px);
+        margin: 2.5rem auto;
         height: 100%;
-
-        .row {
-            height: 100%;
-            flex-wrap: wrap;
-            display: flex;
-            gap: 8rem;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
     }
 </style>
