@@ -42,7 +42,7 @@
                         src: './3.webp',
                         hover: './3b.webp',
                         brand: 'Come Zucchero Filato',
-                        name: 'Voglia di colri pastello',
+                        name: 'Voglia di colori pastello',
                         price: 164.99,
                         sales: 129.99,
                         isInFavorites: false,
@@ -105,7 +105,13 @@
     <div class="container">
         <AppCard v-for="product in products"
             :img="product.src"
-            :title="product.brand"
+            :brand="product.brand"
+            :name="product.name"
+            :price="product.price"
+            :sales="product.sales"
+            :hover="product.hover"
+            :isInFavorites="product.isInFavorites"
+            :badges="product.badges"
         />
     </div>
 </template>

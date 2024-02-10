@@ -2,7 +2,13 @@
 export default {
     props: {
         img: String,
-        title: String,
+        hover: String,
+        brand: String,
+        name: String,
+        price: Number,
+        sales: Number,
+        isInFavorites: Boolean,
+        badges: Array,
     },
 };
 </script>
@@ -10,25 +16,85 @@ export default {
 <template>
     <div class="card">
         <div class="img-container">
-            <img :src="img" :alt="title" />
+            <img :src="img" :alt="brand" />
+            <img class="hover-img" :src="hover" :alt="brand">
         </div>
-        <h3 class="title">{{ title }}</h3>
+
+        <div class="heart">
+            <i v-if="isInFavorites" class="fa-solid fa-heart"></i>
+            <i v-else class="fa-regular fa-heart"></i>
+        </div>
+
+        <div class="badges">
+
+        </div>
+
+        <div class="text">
+            <p class="title">{{ brand }}</p>
+            <h5>{{ name }}</h5>
+            <div class="prices">
+                <span v-if="sales" class="sale">{{ sales }}€</span>
+                <span class="full-price">{{ price }}€</span>
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .card {
-    border: 3px solid black;
     width: calc(100% / 3 - 2rem);
-}
-.img-container {
-    width: 100%;
-    // debug
-    background-color: red;
+    position: relative;
+    cursor: pointer;
+    &:hover .img-container img{
+        display: none;
+    }
+    &:hover .img-container .hover-img{
+        display: block;
+    }
 }
 
-.img-container img {
-    display: block;
+.img-container {
     width: 100%;
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    .hover-img{
+        display: none;
+    }
+}
+
+.heart{
+    font-size: 1.3rem;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #fff;
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: #888888;
+    font-size: 0.8rem;
+}
+
+.prices {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    .sale {
+        color: #ff0000;
+    }
+    
+    .full-price{
+        text-decoration: line-through;
+    }
 }
 </style>
