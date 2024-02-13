@@ -16,10 +16,17 @@ import { store } from '../store';
 <template>
     <div class="layover">
         <div class="modal">
-            <h3>titolo</h3>
-            <div class="icon">
-                <i @click="closeModal()" class="fa-solid fa-xmark "></i>
+            <div class="modal-header">
+                <h3>{{ store.modal.brand }}</h3>
+                <div class="icon">
+                    <i @click="closeModal()" class="fa-solid fa-xmark "></i>
+                </div> 
             </div>
+            <div class="modal-img">
+                <img :src="store.modal.img" alt="">
+                <img :src="store.modal.hover" alt="">
+            </div>
+            <p>{{ store.modal.name }}</p>
         </div>
     </div>
 </template>
@@ -44,7 +51,22 @@ import { store } from '../store';
         width: 500px;
         background-color: #fff;
         padding: 1rem;
-        display: flex;
-        justify-content: space-between;
+
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+        }
     }
+
+    .modal-img{
+        width: 100%;
+        display: flex;
+        gap: 2rem;
+
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+
 </style>

@@ -1,7 +1,5 @@
 <script>
   import { store } from './store'
-  import axios from 'axios';
-
 
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue';
@@ -15,7 +13,7 @@
       }
     },
     components: { AppHeader, AppMain, AppFooter, AppModal },
-    
+
     modal: {
         show: true,
     }

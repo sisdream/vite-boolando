@@ -1,6 +1,7 @@
 <script>
 export default {
     props: {
+        index: Number,
         img: String,
         hover: String,
         brand: String,
@@ -10,11 +11,12 @@ export default {
         isInFavorites: Boolean,
         badges: Array,
     },
+    emits: ['card-open']
 };
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @click="$emit('card-open', this.index )">
         <div class="img-container">
             <img :src="img" :alt="brand" />
             <img class="hover-img" :src="hover" :alt="brand">
