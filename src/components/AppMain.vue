@@ -37,6 +37,7 @@
     @use '../styles/partials/mixins' as *;
 
     .container {
+        position: relative;
         width: min(90%, 1000px);
         margin: 2.5rem auto;
         height: 100%;
