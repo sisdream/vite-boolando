@@ -15,6 +15,10 @@
       }
     },
     components: { AppHeader, AppMain, AppFooter, AppModal },
+    
+    modal: {
+        show: true,
+    }
   }
 </script>
 
