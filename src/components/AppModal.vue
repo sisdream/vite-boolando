@@ -27,6 +27,9 @@ import { store } from '../store';
                 <img :src="store.modal.hover" alt="">
             </div>
             <p>{{ store.modal.name }}</p>
+            <div class="modal-price">
+                <p class="modal-sale">{{ store.modal.sales }} €</p>
+            </div>
         </div>
     </div>
 </template>
@@ -58,15 +61,30 @@ import { store } from '../store';
         }
     }
 
+    h3{
+        border-bottom: 1px solid gray;
+        width: 100%;
+        margin-bottom: 1rem ;
+    }
     .modal-img{
         width: 100%;
         display: flex;
         gap: 2rem;
+        margin-bottom: 1rem;
 
         img{
             display: block;
             width: 100%;
+            border-radius: 15px;
         }
     }
 
+    .modal-price{
+        display: flex;
+        gap: 2rem    
+    }
+
+    .modal-sale{
+        color: crimson;
+    }
 </style>

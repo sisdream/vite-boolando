@@ -9,5 +9,7 @@ export const store = reactive({
         name: "",
         img: "",
         hover: "",
+        sales: "",
+        prices: "",
     }
 })

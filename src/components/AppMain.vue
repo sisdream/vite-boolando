@@ -24,6 +24,8 @@
                 store.modal.name = cardSelected.name;
                 store.modal.img = cardSelected.src;
                 store.modal.hover = cardSelected.hover;
+                store.modal.sales = cardSelected.sales;
+                store.modal.price = cardSelected.price;
             }
         }
     }
